@@ -1,0 +1,138 @@
+4 - Polimorfismo
+
+
+class Animal 
+{
+    protected string nome
+    protected int idade
+    protected string raca
+
+    void Animal(nome, idade, raca) -- construtor
+    {
+        this.nome = nome
+    }
+
+    void comer(comida)
+    void dormir()
+    void beber(liquido)
+    void locomover(distancia)
+
+    string getName()
+    {
+        return this.nome -- return => retornando informações para quem chamou o método
+    }
+
+    void setName(nome)
+    {
+        this.nome = nome
+    }
+
+    int getAge()
+    {
+        return this.idade
+    }
+}
+
+class Cachorro: extends Animal
+{
+    string marcaDaRacao
+
+    void Cachorro(nome, idade, raca, marcaDaRacao)
+    {
+        this.marcaDaRacao = marcaDaRacao
+        this.Animal(nome, idade, raca)
+    }
+
+    void latir()
+
+    void locomover(distancia)
+    {
+        -- cachorro anda
+    }
+
+}
+
+class Passarinho: extends Animal
+{
+    ListCores cor
+    bool podeVoar
+
+    void locomover(distancia)
+    {
+        -- passarinho voa
+    }
+
+
+}
+
+
+
+Animal cachorro1 = new  Animal('bob', 2, 'poodle')
+-- nome = cachorro1.nomeDoAnimal (errado)
+nome = cachorro1.getName()
+
+-- gatinho2.nome = 'mel' (errado)
+gatinho2.setName('mel')
+
+print(cachorro1.getAge())
+=> print(2)
+
+cachorro.locomover()
+passarinho.locomover()
+
+
+
+
+
+class Endereco()
+{
+    string rua
+    int numero
+    string cep
+    string bairro
+    string cidade
+    string estado
+}
+
+class Pessoa
+{
+    string nome
+    Endereco endereco
+    int Documento
+}
+
+class Conta 
+{
+    float saldo
+    string agencia
+    string numero
+    Pessoa titular
+
+    void Conta()
+    {
+        this.numero = randint()
+    }
+
+    void calcularSaldo()
+    bool transferir(valor, contaDestino)
+    void sacar(valor)
+    void depositar(valor)
+
+    float getSaldo()
+}
+
+class ContaPF: extends Conta
+{
+    float taxa = 0.5
+}
+
+class ContaPJ: extends Conta
+{
+    float taxa = 0.8
+}
+
+Conta conta = new Conta()
+
+
+
+
