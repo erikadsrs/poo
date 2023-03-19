@@ -1,0 +1,101 @@
+2 - Encapsulamento
+publico - todos tem acesso
+protegido - classes derivadas tem acesso (herança)
+privado - apenas a classe tem acesso
+
+
+class Animal 
+{
+    public string nome
+    int idade
+    string raca
+
+    void Animal(nome, idade, raca) -- construtor
+    {
+        this.nome = nome
+    }
+
+    void comer(comida)
+    void dormir()
+    void beber(liquido)
+
+    string getName()
+    {
+        return this.nome -- return => retornando informações para quem chamou o método
+    }
+
+    void setName(nome)
+    {
+        this.nome = nome
+    }
+
+    int getAge()
+    {
+        return this.idade
+    }
+}
+
+Animal cachorro1 = new  Animal('bob', 2, 'poodle')
+-- nome = cachorro1.nomeDoAnimal (errado)
+nome = cachorro1.getName()
+
+-- gatinho2.nome = 'mel' (errado)
+gatinho2.setName('mel')
+
+print(cachorro1.getAge())
+=> print(2)
+
+class Endereco()
+{
+    string rua
+    int numero
+    CEP cep
+    string bairro
+    string cidade
+    string estado
+
+    string getCep()
+    {
+        return this.cep.getNumero()
+    }
+}
+
+class Pessoa
+{
+    string nome
+    Endereco endereco
+    int Documento
+
+    string getCep()
+    {
+        this.endereco.getCep()
+    }
+}
+
+-- conta.getTitular().endereco.cep (errado)
+conta.getTitular().getCep()
+
+
+class Conta 
+{
+    float saldo
+    string agencia
+    string numero
+    Pessoa titular
+
+    void Conta()
+    {
+        this.numero = randint()
+    }
+
+    void calcularSaldo()
+    bool transferir(valor, contaDestino)
+    void sacar(valor)
+    void depositar(valor)
+
+    float getSaldo()
+
+}
+
+Conta conta = new Conta()
+
