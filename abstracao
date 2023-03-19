@@ -1,0 +1,57 @@
+1 - Abstração
+
+class Animal 
+{
+    string nome
+    int idade
+    string raca
+
+    void Animal(nome, idade, raca) -- construtor
+    {
+        this.nome = nome
+    }
+
+    void comer(comida)
+    void dormir()
+    void beber(liquido)
+}
+
+Animal cachorro = new  Animal('bob', 2, 'poodle')
+
+class Endereco()
+{
+    string rua
+    int numero
+    string cep
+    string bairro
+    string cidade
+    string estado
+}
+
+class Pessoa
+{
+    string nome
+    Endereco endereco
+    int Documento
+}
+
+class Conta 
+{
+    float saldo
+    string agencia
+    string numero
+    Pessoa titular
+
+    void Conta()
+    {
+        this.numero = randint()
+    }
+
+    void calcularSaldo()
+    bool transferir(valor, contaDestino)
+    void sacar(valor)
+    void depositar(valor)
+
+}
+
+Conta conta = new Conta()
